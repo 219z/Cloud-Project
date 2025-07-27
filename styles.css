@@ -1,0 +1,250 @@
+/* Halo Polling App Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a1428 0%, #1a2b4a 50%, #2c4870 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(0, 150, 255, 0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #00d4ff;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #b8d4ff;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #00d4ff;
+    border-left: 4px solid #00d4ff;
+    padding-left: 15px;
+}
+
+.poll-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #b8d4ff;
+    font-size: 1rem;
+}
+
+.form-group input {
+    padding: 12px 16px;
+    border: 2px solid rgba(0, 150, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #00d4ff;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.form-group input::placeholder {
+    color: rgba(184, 212, 255, 0.6);
+}
+
+#submit-poll-button {
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #0066cc, #00d4ff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#submit-poll-button:hover {
+    background: linear-gradient(45deg, #0080ff, #00f0ff);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+}
+
+#submit-poll-button:active {
+    transform: translateY(0);
+}
+
+#polls-list {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#polls-list:empty::before {
+    content: "No polls created yet. Create your first poll above! 🚀";
+    color: rgba(184, 212, 255, 0.7);
+    font-style: italic;
+    text-align: center;
+    padding: 40px 20px;
+    border: 2px dashed rgba(0, 150, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.poll-item {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 150, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.poll-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #00d4ff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.2);
+}
+
+.poll-question {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.poll-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.poll-option {
+    background: rgba(0, 150, 255, 0.2);
+    color: #b8d4ff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(0, 150, 255, 0.3);
+}
+
+#poll-results {
+    min-height: 100px;
+}
+
+#poll-results:empty::before {
+    content: "Select a poll to view results 📊";
+    color: rgba(184, 212, 255, 0.7);
+    font-style: italic;
+    text-align: center;
+    padding: 40px 20px;
+    border: 2px dashed rgba(0, 150, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    display: block;
+}
+
+.results-container {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid rgba(0, 150, 255, 0.2);
+}
+
+.result-item {
+    margin-bottom: 20px;
+}
+
+.result-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.result-bar {
+    height: 30px;
+    background: rgba(0, 150, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.result-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0066cc, #00d4ff);
+    border-radius: 15px;
+    transition: width 0.8s ease-in-out;
+    position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 20px;
+    }
+    
+    .poll-options {
+        flex-direction: column;
+    }
+}

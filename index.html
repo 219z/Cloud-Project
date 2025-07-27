@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halo Polling App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Halo Polling App</h1>
+            <p>Create and participate in Halo-themed polls!</p>
+        </header>
+
+        <!-- Create Poll Section -->
+        <section class="create-poll-section">
+            <h2>Create a New Poll</h2>
+            <form class="poll-form">
+                <div class="form-group">
+                    <label for="poll-question">Poll Question:</label>
+                    <input type="text" id="poll-question" placeholder="e.g., What's your favorite Halo game?" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="poll-option-1">Option 1:</label>
+                    <input type="text" id="poll-option-1" placeholder="e.g., Halo: Combat Evolved" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="poll-option-2">Option 2:</label>
+                    <input type="text" id="poll-option-2" placeholder="e.g., Halo 2" required>
+                </div>
+                
+                <button type="submit" id="submit-poll-button">Create Poll</button>
+            </form>
+        </section>
+
+        <!-- Polls List Section -->
+        <section class="polls-section">
+            <h2>Active Polls</h2>
+            <div id="polls-list">
+                <!-- Polls will be dynamically added here -->
+            </div>
+        </section>
+
+        <!-- Poll Results Section -->
+        <section class="results-section">
+            <h2>Poll Results</h2>
+            <div id="poll-results">
+                <!-- Poll results will be displayed here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

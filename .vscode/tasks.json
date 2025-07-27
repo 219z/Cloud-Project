@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Open Halo Polling App",
+			"type": "shell",
+			"command": "open",
+			"args": [
+				"index.html"
+			],
+			"group": "build",
+			"isBackground": false
+		}
+	]
+}
