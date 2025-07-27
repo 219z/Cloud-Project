@@ -1,10 +1,9 @@
-// Halo Polling App JavaScript - Modified for AWS Backend
+// Halo Polling App JavaScript
 
 class HaloPollingApp {
     constructor() {
-        // Need to get the API Gateway URL from the AWS console later.
-        // This is for Part 2 of the project.
-        this.apiUrl = "https://YOUR_API_GATEWAY_URL/dev"; // IMPORTANT: Remember to replace this.
+        // This is the live URL for the API Gateway backend.
+        this.apiUrl = "https://r86t8bdcza.execute-api.us-east-1.amazonaws.com/dev";
 
         this.polls = [];
         this.currentPollId = null;
